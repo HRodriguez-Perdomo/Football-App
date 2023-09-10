@@ -1,8 +1,9 @@
 import React from "react";
 import { Provider } from "react-redux";
 import store from "./store"
-import Players from "./components/Players";
-import SelectedTeam from "./components/SelectedTeam";
+import Players from "./components/player/Players";
+import SelectedTeam from "./components/SelectedTeam"; 
+
 
 
 

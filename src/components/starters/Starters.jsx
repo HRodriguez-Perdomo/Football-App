@@ -1,13 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
+import style from "./starters.module.css"
+import field from "../../cancha (1).svg"
 
 const Starters = ({starters, removeStarter}) => (
     <section>
         <h2>Starters</h2>
-        <div className="field">
+        <div className={style.field}>
             {
                 starters.map(p => (
-                    <article className="starter" key={p.id}>
+                    <article className={style.starter} key={p.id}>
                         <div>
                             <img src={p.photo} alt={p.name} />
                             <button onClick={()=>removeStarter(p)}>X</button>
@@ -16,6 +18,7 @@ const Starters = ({starters, removeStarter}) => (
                     </article>
                 ))
             }
+            <img src={field} alt="field of tootball" />
         </div>
 
     </section>

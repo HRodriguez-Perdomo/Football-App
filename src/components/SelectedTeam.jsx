@@ -1,6 +1,6 @@
 import React from "react";
-import Starters from "./Starters";
-import Substitutes from "./Substitutes";
+import Starters from "./starters/Starters";
+import Substitutes from "./substitutes/Substitutes";
 
 const SelectedTeam = () =>(
     <section>
