@@ -1,5 +1,19 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --spacing: 0.75rem;
+  }
+
+  body {
+    font-family: sans-serif;
+    background: #102132
+  }
 .player{
-    display: flex;
+    display: inline-block;
     flex-direction: column;
     align-items: center;
     padding: 1rem;
@@ -9,8 +23,9 @@
 }
 
 .container-players{
-    overflow: auto;
-    padding-bottom: 2rem;
+    overflow-x: auto; 
+  overflow-y: hidden; 
+  padding-bottom: 2rem;
 }
 h3{
     margin-bottom: var(--spacing);
@@ -43,6 +58,56 @@ button:nth-child(2) {
       color: #fff;
     }}
     
-.img{
-    border-radius: 50%;
+section {
+    margin-bottom: 4rem;
+    padding: 1rem;
+    background: #0c1926;
+    border-radius: 8px; 
+  }
+  h1 {
+    color: white;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+  }
+  main {
+    margin: 0 auto;
+    max-width: 1500px;
+    padding: 2rem 1rem;
+  }
+  h2 {
+    margin-bottom: 1rem;
+    color: white
+  }
+  section>div:not():not(.contenedor-jugadores) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+
+    @media screen and (min-width: 640px) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+
+  }
+  article img {
+    --size: 4.5rem;
+    width: var(--size);
+    height: var(--size);
+    object-fit: cover;
+    border-radius: 100%;
+    margin-bottom: var(--spacing);
+  }
+  button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  button:nth-child(2) {
+    background: rgb(83, 87, 90);
+    color: white;
+    border: 1px solid var(--color);
+
+    &:hover {
+      background-color: rgb(58, 62, 65);
+      color: #fff;
+    }
 }
